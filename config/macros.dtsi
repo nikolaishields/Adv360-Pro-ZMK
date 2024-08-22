@@ -2,13 +2,13 @@ macro_launcher: macro_launcher{
 compatible = "zmk,behavior-macro";
 label = "macro_launcher";
 #binding-cells = <0>;
-bindings = <&kp RIGHT_GUI>, <&kp D>;
+bindings = <&kp LEFT_WIN>, <&kp D>;
 };
 macro_capcom: macro_capcom{
 compatible = "zmk,behavior-macro";
 label = "macro_capcom";
 #binding-cells = <0>;
-bindings = <&kp RIGHT_GUI>, <&kp C>;
+bindings = <&kp LEFT_WIN>, <&kp C>;
 };
 macro_shell: macro_shell{
 compatible = "zmk,behavior-macro";
