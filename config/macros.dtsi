@@ -1,3 +1,21 @@
+macro_launcher: macro_launcher{
+compatible = "zmk,behavior-macro";
+label = "macro_launcher";
+#binding-cells = <0>;
+bindings = <&kp RIGHT_GUI>, <&kp D>;
+};
+macro_capcom: macro_capcom{
+compatible = "zmk,behavior-macro";
+label = "macro_capcom";
+#binding-cells = <0>;
+bindings = <&kp RIGHT_GUI>, <&kp C>;
+};
+macro_shell: macro_shell{
+compatible = "zmk,behavior-macro";
+label = "macro_shell";
+#binding-cells = <0>;
+bindings = <&kp LEFT_WIN>, <&kp S>;
+};
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
