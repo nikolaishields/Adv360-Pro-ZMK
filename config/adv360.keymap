@@ -25,7 +25,7 @@
             label = "HOMEROW_LEFT";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
@@ -38,12 +38,22 @@
             label = "HOMEROW_RIGHT";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
             quick-tap-ms = <175>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        thumb-tab {
+            bindings = <&kp TAB>;
+            key-positions = <65 70>;
+            layers = <0>;
         };
     };
 
@@ -53,11 +63,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1                    &kp N2                    &kp N3                      &kp N4                        &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7                          &kp N8                        &kp N9                      &kp N0                              &kp MINUS
-&kp TAB    &kp Q                     &kp W                     &kp E                       &kp R                         &kp T   &none                                                    &none      &kp Y   &kp U                           &kp I                         &kp O                       &kp P                               &kp BSLH
-&kp ESC    &homerow_left LEFT_GUI A  &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT D  &homerow_left LEFT_CONTROL F  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &homerow_right RIGHT_CONTROL J  &homerow_right RIGHT_SHIFT K  &homerow_right RIGHT_ALT L  &homerow_right RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z                     &kp X                     &kp C                       &kp V                         &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M                           &kp COMMA                     &kp DOT                     &kp FSLH                            &kp RSHFT
-&mo 2      &kp GRAVE                 &kp CAPS                  &kp LEFT                    &kp RIGHT                             &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP                          &kp DOWN                      &kp LBKT                    &kp RBKT                            &mo 2
+&kp EQUAL  &kp N1                    &kp N2                    &kp N3                      &kp N4                        &kp N5  &tog 1                                                       &mo 3      &kp N6  &kp N7                          &kp N8                        &kp N9                      &kp N0                              &kp MINUS
+&none      &kp Q                     &kp W                     &kp E                       &kp R                         &kp T   &none                                                        &none      &kp Y   &kp U                           &kp I                         &kp O                       &kp P                               &kp BSLH
+&kp TAB    &homerow_left LEFT_GUI A  &homerow_left LEFT_ALT S  &homerow_left LEFT_SHIFT D  &homerow_left LEFT_CONTROL F  &kp G   &none            &none          &none      &none  &none      &none      &kp H   &homerow_right RIGHT_CONTROL J  &homerow_right RIGHT_SHIFT K  &homerow_right RIGHT_ALT L  &homerow_right RIGHT_GUI SEMICOLON  &kp SQT
+&none      &kp Z                     &kp X                     &kp C                       &kp V                         &kp B                                   &none      &none                        &kp N   &kp M                           &kp COMMA                     &kp DOT                     &kp FSLH                            &none
+&mo 2      &kp GRAVE                 &kp CAPS                  &kp LEFT                    &kp RIGHT                             &lt 2 BACKSPACE  &mt ESC GRAVE  &none      &none  &kp ENTER  &kp SPACE          &kp UP                          &kp DOWN                      &kp LBKT                    &kp RBKT                            &mo 2
             >;
         };
 
